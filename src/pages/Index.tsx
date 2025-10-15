@@ -41,6 +41,7 @@ const Index = () => {
               <a href="#experience" className="text-foreground/80 hover:text-primary transition-colors">Experience</a>
               <a href="#skills" className="text-foreground/80 hover:text-primary transition-colors">Skills</a>
               <a href="#books" className="text-foreground/80 hover:text-primary transition-colors">Books</a>
+              <a href="#news" className="text-foreground/80 hover:text-primary transition-colors">News</a>
               <a href="#one-weekend" className="text-foreground/80 hover:text-primary transition-colors">Web Services</a>
               <a href="#contact" className="text-foreground/80 hover:text-primary transition-colors">Contact</a>
             </div>
@@ -373,6 +374,216 @@ const Index = () => {
                   <ExternalLink className="ml-2" />
                 </a>
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* News & Recognition Section */}
+      <section id="news" className="py-24 bg-gradient-to-br from-background via-primary/5 to-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                News & Recognition
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Media features, community impact, and professional achievements
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* News Item 1 */}
+              <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 bg-card/80 backdrop-blur border-border/50 hover:border-primary/30">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-3 mb-3">
+                    <Award className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                        Students honor valor in verse
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-3">November 8, 2023</p>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    Working alongside the staff, Jordan supported a Veterans Day poetry tribute that blended service learning with student creativity.
+                  </p>
+                  <Button variant="outline" size="sm" asChild className="group/btn">
+                    <a href="https://www.thecorryjournal.com/news/article_601bf1ca-7e40-11ee-8e9f-0f5b8a2de589.html" target="_blank" rel="noopener noreferrer">
+                      Read Article
+                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* News Item 2 */}
+              <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 bg-card/80 backdrop-blur border-border/50 hover:border-primary/30">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-3 mb-3">
+                    <Award className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                        Heroes bring early Christmas for Corry, UC kids
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-3">December 20, 2024</p>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    Collaborating with community partners, Jordan helped deliver magical early-Christmas experiences for students.
+                  </p>
+                  <Button variant="outline" size="sm" asChild className="group/btn">
+                    <a href="https://www.thecorryjournal.com/news/article_837a2826-be4a-11ef-b99c-dffd8f302ff5.html" target="_blank" rel="noopener noreferrer">
+                      Read Article
+                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* News Item 3 */}
+              <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 bg-card/80 backdrop-blur border-border/50 hover:border-primary/30">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-3 mb-3">
+                    <Award className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                        Santa Fund campaign underway
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-3">December 9, 2023</p>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    As part of the holiday giving committee, Jordan supported the Santa Fund drive—providing festive support to dozens of local families in need.
+                  </p>
+                  <Button variant="outline" size="sm" asChild className="group/btn">
+                    <a href="https://www.thecorryjournal.com/news/article_ff57e93e-95f5-11ee-a773-f336ac1d073e.html" target="_blank" rel="noopener noreferrer">
+                      Read Article
+                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* News Item 4 */}
+              <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 bg-card/80 backdrop-blur border-border/50 hover:border-primary/30">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-3 mb-3">
+                    <Award className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                        Acclaimed children's author visits schools
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-3">March 7, 2024</p>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    Coordinating with library staff, Jordan curated live author visits that inspired a renewed passion for reading across the district.
+                  </p>
+                  <Button variant="outline" size="sm" asChild className="group/btn">
+                    <a href="https://www.thecorryjournal.com/news/article_8c495c80-dc03-11ee-8b6b-07e7c75a2175.html" target="_blank" rel="noopener noreferrer">
+                      Read Article
+                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* News Item 5 */}
+              <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 bg-card/80 backdrop-blur border-border/50 hover:border-primary/30">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-3 mb-3">
+                    <Award className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                        CAIS supports city K‑9 initiative
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-3">December 8, 2022</p>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    Working with law-enforcement liaisons, Jordan supported a unique K‑9 initiative—strengthening safety partnerships and student engagement.
+                  </p>
+                  <Button variant="outline" size="sm" asChild className="group/btn">
+                    <a href="https://www.thecorryjournal.com/news/article_9d2e9196-7714-11ed-8804-bfd14463a803.html" target="_blank" rel="noopener noreferrer">
+                      Read Article
+                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* News Item 6 */}
+              <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 bg-card/80 backdrop-blur border-border/50 hover:border-primary/30">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-3 mb-3">
+                    <Award className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                        CAIS finalist in 'How Cool is Your School?'
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-3">November 1, 2022</p>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    Leading a student-driven media team, Jordan guided the production of award-winning project videos—fueling a culture of innovation.
+                  </p>
+                  <Button variant="outline" size="sm" asChild className="group/btn">
+                    <a href="https://www.thecorryjournal.com/news/article_904f14d2-59fa-11ed-89a9-2fb400f148c8.html" target="_blank" rel="noopener noreferrer">
+                      Read Article
+                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* News Item 7 */}
+              <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 bg-card/80 backdrop-blur border-border/50 hover:border-primary/30">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-3 mb-3">
+                    <Award className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                        Considering the City: Building a Bayfront Highway
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-3">March 10, 2023</p>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    Showcased a collaborative digital collage & AI illustration in Erie Reader, blending art & civic dialogue around Bayfront planning.
+                  </p>
+                  <Button variant="outline" size="sm" asChild className="group/btn">
+                    <a href="https://www.eriereader.com/article/considering-the-city-building-a-bayfront-highway" target="_blank" rel="noopener noreferrer">
+                      Read Article
+                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* News Item 8 */}
+              <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 bg-card/80 backdrop-blur border-border/50 hover:border-primary/30">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-3 mb-3">
+                    <Award className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                        2024 Jan Stauber Literacy Grant Winner
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-3">2024 Award</p>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    Co‑recipient of the 2024 Jan Stauber Literacy Grant, pioneering Sherlock Holmes–themed reading initiatives alongside school librarians.
+                  </p>
+                  <Button variant="outline" size="sm" asChild className="group/btn">
+                    <a href="https://www.beaconsociety.com/past---current-grant-awards.html" target="_blank" rel="noopener noreferrer">
+                      Learn More
+                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
