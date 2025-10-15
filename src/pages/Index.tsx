@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { 
   GraduationCap, 
   Users, 
@@ -18,6 +19,7 @@ import {
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import oneWeekendIcon from "@/assets/one-weekend-icon.jpg";
+import headshot from "@/assets/Jordan_Lander.jpg";
 
 const Index = () => {
   return (
@@ -56,6 +58,11 @@ const Index = () => {
       >
         <div className="container mx-auto px-6 py-32 relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            <div className="mb-8 flex justify-center">
+              <Avatar className="h-40 w-40 border-4 border-primary-foreground/20 shadow-elegant">
+                <AvatarImage src={headshot} alt="Jordan Lander" />
+              </Avatar>
+            </div>
             <Badge className="mb-6 bg-accent/20 text-accent-foreground border-accent/30 backdrop-blur-sm" variant="outline">
               Education Leader & Technology Innovator
             </Badge>
