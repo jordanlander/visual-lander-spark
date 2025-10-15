@@ -15,11 +15,16 @@ import {
   ChevronRight,
   Briefcase,
   Award,
-  Target
+  Target,
+  ShoppingCart
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import oneWeekendIcon from "@/assets/one-weekend-icon.jpg";
 import headshot from "@/assets/Jordan_Lander.jpg";
+import prideAndPortrait from "@/assets/prideandportrait.jpg";
+import emerson from "@/assets/emerson.jpg";
+import strongWoman from "@/assets/strongwoman.jpg";
+import passiveAggressive from "@/assets/passiveaggressive.jpg";
 
 const Index = () => {
   return (
@@ -35,6 +40,7 @@ const Index = () => {
               <a href="#about" className="text-foreground/80 hover:text-primary transition-colors">About</a>
               <a href="#experience" className="text-foreground/80 hover:text-primary transition-colors">Experience</a>
               <a href="#skills" className="text-foreground/80 hover:text-primary transition-colors">Skills</a>
+              <a href="#books" className="text-foreground/80 hover:text-primary transition-colors">Books</a>
               <a href="#one-weekend" className="text-foreground/80 hover:text-primary transition-colors">Web Services</a>
               <a href="#contact" className="text-foreground/80 hover:text-primary transition-colors">Contact</a>
             </div>
@@ -287,8 +293,93 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Books Section */}
+      <section id="books" className="py-24 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Published Books</h2>
+              <p className="text-xl text-muted-foreground">
+                Coloring books and creative publications available on Amazon
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  title: "Pride and Portrait",
+                  subtitle: "A Coloring Book Anthology Featuring the Art of Rebecca Coppock",
+                  author: "JCLander Books",
+                  price: "$14.99",
+                  image: prideAndPortrait,
+                  link: "https://www.amazon.com/dp/B0FG3DCR17"
+                },
+                {
+                  title: "Emerson the Super Squirrel",
+                  subtitle: "A PBIS Coloring Adventure for Positive Behavior",
+                  author: "Mr. Jordan Lander",
+                  price: "$7.99",
+                  image: emerson,
+                  link: "https://www.amazon.com/dp/B0F5Q5WVWM"
+                },
+                {
+                  title: "A Strong Woman",
+                  subtitle: "Coloring Book",
+                  author: "Jordan Charles Lander",
+                  price: "$12.99",
+                  image: strongWoman,
+                  link: "https://www.amazon.com/dp/B0DJRDPTJJ"
+                },
+                {
+                  title: "Passive-Aggressive Office Notes",
+                  subtitle: "The Funny and Relatable Adult Coloring Book",
+                  author: "Jordan Charles Lander",
+                  price: "$7.99",
+                  image: passiveAggressive,
+                  link: "https://www.amazon.com/dp/B0C52216QY"
+                }
+              ].map((book, index) => (
+                <Card key={index} className="group hover:shadow-elegant transition-all duration-300 overflow-hidden animate-scale-in" style={{ animationDelay: `${index * 100}ms` }}>
+                  <div className="relative aspect-[3/4] overflow-hidden bg-muted">
+                    <img 
+                      src={book.image} 
+                      alt={`${book.title} cover`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="font-bold text-lg mb-1 line-clamp-2">{book.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-2 line-clamp-2">{book.subtitle}</p>
+                    <p className="text-xs text-muted-foreground mb-3 italic">by {book.author}</p>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-lg font-bold text-primary">{book.price}</span>
+                      <Badge variant="outline">Paperback</Badge>
+                    </div>
+                    <Button variant="accent" className="w-full group/btn" asChild>
+                      <a href={book.link} target="_blank" rel="noopener noreferrer">
+                        <ShoppingCart className="mr-2 w-4 h-4" />
+                        View on Amazon
+                        <ExternalLink className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <div className="text-center mt-12">
+              <Button variant="hero" size="lg" asChild>
+                <a href="https://www.amazon.com/stores/Jordan-Charles-Lander/author/B0C5TYWMDD" target="_blank" rel="noopener noreferrer">
+                  <BookOpen className="mr-2" />
+                  Shop All Books
+                  <ExternalLink className="ml-2" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-background">
+      <section id="contact" className="py-24 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's Connect</h2>
