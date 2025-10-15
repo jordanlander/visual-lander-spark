@@ -29,21 +29,29 @@ import passiveAggressive from "@/assets/passiveaggressive.jpg";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      {/* Skip to Main Content - Accessibility */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:shadow-lg"
+      >
+        Skip to main content
+      </a>
+
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border" role="navigation" aria-label="Main navigation">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <a href="#home" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+            <a href="#home" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent" aria-label="Jordan Lander - Go to home">
               Jordan Lander
             </a>
             <div className="hidden md:flex items-center gap-8">
-              <a href="#about" className="text-foreground/80 hover:text-primary transition-colors">About</a>
-              <a href="#experience" className="text-foreground/80 hover:text-primary transition-colors">Experience</a>
-              <a href="#skills" className="text-foreground/80 hover:text-primary transition-colors">Skills</a>
-              <a href="#books" className="text-foreground/80 hover:text-primary transition-colors">Books</a>
-              <a href="#news" className="text-foreground/80 hover:text-primary transition-colors">News</a>
-              <a href="#one-weekend" className="text-foreground/80 hover:text-primary transition-colors">Web Services</a>
-              <a href="#contact" className="text-foreground/80 hover:text-primary transition-colors">Contact</a>
+              <a href="#about" className="text-foreground/80 hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-sm px-2 py-1">About</a>
+              <a href="#experience" className="text-foreground/80 hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-sm px-2 py-1">Experience</a>
+              <a href="#skills" className="text-foreground/80 hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-sm px-2 py-1">Skills</a>
+              <a href="#books" className="text-foreground/80 hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-sm px-2 py-1">Books</a>
+              <a href="#news" className="text-foreground/80 hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-sm px-2 py-1">News</a>
+              <a href="#one-weekend" className="text-foreground/80 hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-sm px-2 py-1">Web Services</a>
+              <a href="#contact" className="text-foreground/80 hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-sm px-2 py-1">Contact</a>
             </div>
             <Button variant="hero" size="sm" asChild>
               <a href="#contact">Get In Touch</a>
@@ -62,12 +70,13 @@ const Index = () => {
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
         }}
+        aria-label="Hero section introducing Jordan Lander"
       >
         <div className="container mx-auto px-6 py-32 relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <div className="mb-8 flex justify-center">
               <Avatar className="h-40 w-40 border-4 border-primary-foreground/20 shadow-elegant">
-                <AvatarImage src={headshot} alt="Jordan Lander" />
+                <AvatarImage src={headshot} alt="Professional headshot of Jordan Lander, education leader and technology innovator" />
               </Avatar>
             </div>
             <Badge className="mb-6 bg-accent/20 text-accent-foreground border-accent/30 backdrop-blur-sm" variant="outline">
@@ -99,11 +108,12 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Leadership Highlights</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+      <main id="main-content">
+        <section id="about" className="py-24 bg-muted/30" aria-labelledby="about-heading">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 id="about-heading" className="text-4xl md:text-5xl font-bold mb-12 text-center">Leadership Highlights</h2>
+              <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
                   icon: TrendingUp,
@@ -146,7 +156,7 @@ const Index = () => {
       </section>
 
       {/* One Weekend Websites Featured Section */}
-      <section id="one-weekend" className="py-24 bg-gradient-to-br from-accent/10 via-background to-primary/5">
+      <section id="one-weekend" className="py-24 bg-gradient-to-br from-accent/10 via-background to-primary/5" aria-labelledby="one-weekend-heading">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <Card className="overflow-hidden shadow-elegant border-accent/20 hover:shadow-2xl transition-all duration-500">
@@ -160,16 +170,16 @@ const Index = () => {
                   </div>
                   <div className="p-8 md:p-12 flex flex-col justify-center">
                     <Badge className="mb-4 w-fit bg-accent/20 text-accent border-accent/30">Web Development</Badge>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">One Weekend Websites</h2>
+                    <h2 id="one-weekend-heading" className="text-3xl md:text-4xl font-bold mb-4">One Weekend Websites</h2>
                     <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                       Clean, mobile-first websites for small businesses. <span className="font-semibold text-foreground">$499 flat rate</span> — 
                       delivering a fast, professional one-page site by Monday.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
                       <Button variant="accent" size="lg" asChild className="group">
-                        <a href="https://www.oneweekendwebsites.com/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.oneweekendwebsites.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit One Weekend Websites (opens in new tab)">
                           Visit One Weekend Websites
-                          <ExternalLink className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                          <ExternalLink className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true" />
                         </a>
                       </Button>
                     </div>
@@ -182,10 +192,10 @@ const Index = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-24 bg-background">
+      <section id="experience" className="py-24 bg-background" aria-labelledby="experience-heading">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">Professional Experience</h2>
+            <h2 id="experience-heading" className="text-4xl md:text-5xl font-bold mb-16 text-center">Professional Experience</h2>
             <div className="space-y-12">
               {[
                 {
@@ -251,10 +261,10 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-24 bg-muted/30">
+      <section id="skills" className="py-24 bg-muted/30" aria-labelledby="skills-heading">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">Expertise & Skills</h2>
+            <h2 id="skills-heading" className="text-4xl md:text-5xl font-bold mb-16 text-center">Expertise & Skills</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
@@ -295,11 +305,11 @@ const Index = () => {
       </section>
 
       {/* Books Section */}
-      <section id="books" className="py-24 bg-background">
+      <section id="books" className="py-24 bg-background" aria-labelledby="books-heading">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">Published Books</h2>
+              <h2 id="books-heading" className="text-4xl md:text-5xl font-bold mb-4">Published Books</h2>
               <p className="text-xl text-muted-foreground">
                 Coloring books and creative publications available on Amazon
               </p>
@@ -343,7 +353,7 @@ const Index = () => {
                   <div className="relative aspect-[3/4] overflow-hidden bg-muted">
                     <img 
                       src={book.image} 
-                      alt={`${book.title} cover`}
+                      alt={`Cover of ${book.title}: ${book.subtitle} by ${book.author}`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
@@ -356,10 +366,10 @@ const Index = () => {
                       <Badge variant="outline">Paperback</Badge>
                     </div>
                     <Button variant="accent" className="w-full group/btn" asChild>
-                      <a href={book.link} target="_blank" rel="noopener noreferrer">
-                        <ShoppingCart className="mr-2 w-4 h-4" />
+                      <a href={book.link} target="_blank" rel="noopener noreferrer" aria-label={`View ${book.title} on Amazon (opens in new tab)`}>
+                        <ShoppingCart className="mr-2 w-4 h-4" aria-hidden="true" />
                         View on Amazon
-                        <ExternalLink className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                        <ExternalLink className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" aria-hidden="true" />
                       </a>
                     </Button>
                   </CardContent>
@@ -368,10 +378,10 @@ const Index = () => {
             </div>
             <div className="text-center mt-12">
               <Button variant="hero" size="lg" asChild>
-                <a href="https://www.amazon.com/stores/Jordan-Charles-Lander/author/B0C5TYWMDD" target="_blank" rel="noopener noreferrer">
-                  <BookOpen className="mr-2" />
+                <a href="https://www.amazon.com/stores/Jordan-Charles-Lander/author/B0C5TYWMDD" target="_blank" rel="noopener noreferrer" aria-label="Shop all books by Jordan Lander on Amazon (opens in new tab)">
+                  <BookOpen className="mr-2" aria-hidden="true" />
                   Shop All Books
-                  <ExternalLink className="ml-2" />
+                  <ExternalLink className="ml-2" aria-hidden="true" />
                 </a>
               </Button>
             </div>
@@ -380,11 +390,11 @@ const Index = () => {
       </section>
 
       {/* News & Recognition Section */}
-      <section id="news" className="py-24 bg-gradient-to-br from-background via-primary/5 to-background">
+      <section id="news" className="py-24 bg-gradient-to-br from-background via-primary/5 to-background" aria-labelledby="news-heading">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <h2 id="news-heading" className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 News & Recognition
               </h2>
               <p className="text-xl text-muted-foreground">
@@ -409,9 +419,9 @@ const Index = () => {
                     Working alongside the staff, Jordan supported a Veterans Day poetry tribute that blended service learning with student creativity.
                   </p>
                   <Button variant="outline" size="sm" asChild className="group/btn">
-                    <a href="https://www.thecorryjournal.com/news/article_601bf1ca-7e40-11ee-8e9f-0f5b8a2de589.html" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.thecorryjournal.com/news/article_601bf1ca-7e40-11ee-8e9f-0f5b8a2de589.html" target="_blank" rel="noopener noreferrer" aria-label="Read article about Students honor valor in verse (opens in new tab)">
                       Read Article
-                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" aria-hidden="true" />
                     </a>
                   </Button>
                 </CardContent>
@@ -433,9 +443,9 @@ const Index = () => {
                     Collaborating with community partners, Jordan helped deliver magical early-Christmas experiences for students.
                   </p>
                   <Button variant="outline" size="sm" asChild className="group/btn">
-                    <a href="https://www.thecorryjournal.com/news/article_837a2826-be4a-11ef-b99c-dffd8f302ff5.html" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.thecorryjournal.com/news/article_837a2826-be4a-11ef-b99c-dffd8f302ff5.html" target="_blank" rel="noopener noreferrer" aria-label="Read article about Heroes bring early Christmas for Corry, UC kids (opens in new tab)">
                       Read Article
-                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" aria-hidden="true" />
                     </a>
                   </Button>
                 </CardContent>
@@ -457,9 +467,9 @@ const Index = () => {
                     As part of the holiday giving committee, Jordan supported the Santa Fund drive—providing festive support to dozens of local families in need.
                   </p>
                   <Button variant="outline" size="sm" asChild className="group/btn">
-                    <a href="https://www.thecorryjournal.com/news/article_ff57e93e-95f5-11ee-a773-f336ac1d073e.html" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.thecorryjournal.com/news/article_ff57e93e-95f5-11ee-a773-f336ac1d073e.html" target="_blank" rel="noopener noreferrer" aria-label="Read article about Santa Fund campaign underway (opens in new tab)">
                       Read Article
-                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" aria-hidden="true" />
                     </a>
                   </Button>
                 </CardContent>
@@ -481,9 +491,9 @@ const Index = () => {
                     Coordinating with library staff, Jordan curated live author visits that inspired a renewed passion for reading across the district.
                   </p>
                   <Button variant="outline" size="sm" asChild className="group/btn">
-                    <a href="https://www.thecorryjournal.com/news/article_8c495c80-dc03-11ee-8b6b-07e7c75a2175.html" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.thecorryjournal.com/news/article_8c495c80-dc03-11ee-8b6b-07e7c75a2175.html" target="_blank" rel="noopener noreferrer" aria-label="Read article about Acclaimed children's author visits schools (opens in new tab)">
                       Read Article
-                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" aria-hidden="true" />
                     </a>
                   </Button>
                 </CardContent>
@@ -505,9 +515,9 @@ const Index = () => {
                     Working with law-enforcement liaisons, Jordan supported a unique K‑9 initiative—strengthening safety partnerships and student engagement.
                   </p>
                   <Button variant="outline" size="sm" asChild className="group/btn">
-                    <a href="https://www.thecorryjournal.com/news/article_9d2e9196-7714-11ed-8804-bfd14463a803.html" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.thecorryjournal.com/news/article_9d2e9196-7714-11ed-8804-bfd14463a803.html" target="_blank" rel="noopener noreferrer" aria-label="Read article about CAIS supports city K-9 initiative (opens in new tab)">
                       Read Article
-                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" aria-hidden="true" />
                     </a>
                   </Button>
                 </CardContent>
@@ -529,9 +539,9 @@ const Index = () => {
                     Leading a student-driven media team, Jordan guided the production of award-winning project videos—fueling a culture of innovation.
                   </p>
                   <Button variant="outline" size="sm" asChild className="group/btn">
-                    <a href="https://www.thecorryjournal.com/news/article_904f14d2-59fa-11ed-89a9-2fb400f148c8.html" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.thecorryjournal.com/news/article_904f14d2-59fa-11ed-89a9-2fb400f148c8.html" target="_blank" rel="noopener noreferrer" aria-label="Read article about CAIS finalist in How Cool is Your School contest (opens in new tab)">
                       Read Article
-                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" aria-hidden="true" />
                     </a>
                   </Button>
                 </CardContent>
@@ -553,9 +563,9 @@ const Index = () => {
                     Showcased a collaborative digital collage & AI illustration in Erie Reader, blending art & civic dialogue around Bayfront planning.
                   </p>
                   <Button variant="outline" size="sm" asChild className="group/btn">
-                    <a href="https://www.eriereader.com/article/considering-the-city-building-a-bayfront-highway" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.eriereader.com/article/considering-the-city-building-a-bayfront-highway" target="_blank" rel="noopener noreferrer" aria-label="Read article about Considering the City: Building a Bayfront Highway (opens in new tab)">
                       Read Article
-                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" aria-hidden="true" />
                     </a>
                   </Button>
                 </CardContent>
@@ -577,9 +587,9 @@ const Index = () => {
                     Co‑recipient of the 2024 Jan Stauber Literacy Grant, pioneering Sherlock Holmes–themed reading initiatives alongside school librarians.
                   </p>
                   <Button variant="outline" size="sm" asChild className="group/btn">
-                    <a href="https://www.beaconsociety.com/past---current-grant-awards.html" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.beaconsociety.com/past---current-grant-awards.html" target="_blank" rel="noopener noreferrer" aria-label="Learn more about 2024 Jan Stauber Literacy Grant Winner (opens in new tab)">
                       Learn More
-                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                      <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" aria-hidden="true" />
                     </a>
                   </Button>
                 </CardContent>
@@ -590,40 +600,41 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-muted/30">
+      <section id="contact" className="py-24 bg-muted/30" aria-labelledby="contact-heading">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's Connect</h2>
+            <h2 id="contact-heading" className="text-4xl md:text-5xl font-bold mb-6">Let's Connect</h2>
             <p className="text-xl text-muted-foreground mb-12">
               Interested in discussing education innovation, leadership opportunities, or web development services? 
               I'd love to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button variant="hero" size="lg" asChild className="group">
-                <a href="mailto:jordan@oneweekendwebsites.com">
-                  <Mail className="mr-2" />
+                <a href="mailto:jordan@oneweekendwebsites.com" aria-label="Send email to Jordan Lander">
+                  <Mail className="mr-2" aria-hidden="true" />
                   Email Me
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild className="group">
-                <a href="https://www.linkedin.com/in/jordanlander/" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="mr-2" />
+                <a href="https://www.linkedin.com/in/jordanlander/" target="_blank" rel="noopener noreferrer" aria-label="Visit Jordan Lander's LinkedIn profile (opens in new tab)">
+                  <Linkedin className="mr-2" aria-hidden="true" />
                   LinkedIn
-                  <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true" />
                 </a>
               </Button>
             </div>
             <div className="flex gap-6 justify-center text-muted-foreground">
-              <a href="https://github.com/jordanlander" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                <Github className="w-6 h-6" />
+              <a href="https://github.com/jordanlander" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-sm p-1" aria-label="Visit Jordan Lander's GitHub profile (opens in new tab)">
+                <Github className="w-6 h-6" aria-hidden="true" />
               </a>
             </div>
           </div>
         </div>
       </section>
+    </main>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-border bg-muted/30">
+      <footer className="py-8 border-t border-border bg-muted/30" role="contentinfo">
         <div className="container mx-auto px-6">
           <div className="text-center text-muted-foreground">
             <p>&copy; {new Date().getFullYear()} Jordan Lander. All rights reserved.</p>
