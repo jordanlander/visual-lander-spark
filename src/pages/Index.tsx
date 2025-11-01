@@ -221,14 +221,13 @@ const Index = () => {
                   ]
                 },
                 {
-                  title: "Director of Innovation & STEAM",
-                  organization: "Corry Area SD",
-                  period: "Jul 2020 – Jan 2022",
+                  title: "Science Teacher",
+                  organization: "Erie's Public Schools",
+                  period: "Aug 2016 – Jan 2022",
                   highlights: [
-                    "Designed and implemented inclusive, inquiry-based STEAM curriculum K–12",
-                    "Directed digital transformation, including LMS adoption and tech integration",
-                    "Managed $2M+ budget for educational technology and professional development",
-                    "Built community partnerships securing grants and resources for underserved students"
+                    "Led advanced science and CTE programs while mentoring colleagues in technology integration",
+                    "Consulted on curriculum design and building-wide instructional initiatives",
+                    "Recognized for innovative instruction and student engagement"
                   ]
                 }
               ].map((job, index) => (
