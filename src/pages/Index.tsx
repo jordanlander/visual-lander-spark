@@ -21,7 +21,7 @@ import {
 import heroBg from "@/assets/hero-bg.jpg";
 import oneWeekendIcon from "@/assets/one-weekend-icon.jpg";
 import headshot from "@/assets/Jordan_Lander.jpg";
-import prideAndPortrait from "@/assets/prideandportrait.jpg";
+import circleMeditation from "@/assets/circlemeditation.jpg";
 import emerson from "@/assets/emerson.jpg";
 import strongWoman from "@/assets/strongwoman.jpg";
 import passiveAggressive from "@/assets/passiveaggressive.jpg";
@@ -316,12 +316,12 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
-                  title: "Pride and Portrait",
-                  subtitle: "A Coloring Book Anthology Featuring the Art of Rebecca Coppock",
-                  author: "JCLander Books",
-                  price: "$14.99",
-                  image: prideAndPortrait,
-                  link: "https://www.amazon.com/dp/B0FG3DCR17"
+                  title: "Circle Meditation",
+                  subtitle: "31 Days of Coloring & Reflection",
+                  author: "Jordan Charles Lander",
+                  price: "$9.99",
+                  image: circleMeditation,
+                  link: "https://www.amazon.com/dp/B0H4BJRH7C"
                 },
                 {
                   title: "Emerson the Super Squirrel",
