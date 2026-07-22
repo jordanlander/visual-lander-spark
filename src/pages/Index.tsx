@@ -19,7 +19,7 @@ import {
   ShoppingCart
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import oneWeekendIcon from "@/assets/one-weekend-icon.jpg";
+
 import headshot from "@/assets/Jordan_Lander.jpg";
 import circleMeditation from "@/assets/circlemeditation.jpg";
 import emerson from "@/assets/emerson.jpg";
