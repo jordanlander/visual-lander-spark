@@ -19,7 +19,7 @@ import {
   ShoppingCart
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import oneWeekendIcon from "@/assets/one-weekend-icon.jpg";
+
 import headshot from "@/assets/Jordan_Lander.jpg";
 import circleMeditation from "@/assets/circlemeditation.jpg";
 import emerson from "@/assets/emerson.jpg";
@@ -155,41 +155,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* One Weekend Websites Featured Section */}
-      <section id="one-weekend" className="py-24 bg-gradient-to-br from-accent/10 via-background to-primary/5" aria-labelledby="one-weekend-heading">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-            <Card className="overflow-hidden shadow-elegant border-accent/20 hover:shadow-2xl transition-all duration-500">
-              <CardContent className="p-0">
-                <div className="grid md:grid-cols-2 gap-0">
-                  <div 
-                    className="relative h-64 md:h-auto bg-cover bg-center"
-                    style={{ backgroundImage: `url(${oneWeekendIcon})` }}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-accent/80" />
-                  </div>
-                  <div className="p-8 md:p-12 flex flex-col justify-center">
-                    <Badge className="mb-4 w-fit bg-accent/20 text-accent border-accent/30">Web Development</Badge>
-                    <h2 id="one-weekend-heading" className="text-3xl md:text-4xl font-bold mb-4">One Weekend Websites</h2>
-                    <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                      Clean, mobile-first websites for small businesses. <span className="font-semibold text-foreground">$499 flat rate</span> — 
-                      delivering a fast, professional one-page site by Monday.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Button variant="accent" size="lg" asChild className="group">
-                        <a href="https://www.oneweekendwebsites.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit One Weekend Websites (opens in new tab)">
-                          Visit One Weekend Websites
-                          <ExternalLink className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true" />
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      {/* One Weekend Websites moved to compact banner before Contact */}
 
       {/* Experience Section */}
       <section id="experience" className="py-24 bg-background" aria-labelledby="experience-heading">
@@ -598,7 +564,37 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* One Weekend Websites — Compact Banner */}
+      <section id="one-weekend" className="py-16 bg-background" aria-labelledby="one-weekend-heading">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="relative overflow-hidden rounded-2xl bg-gradient-hero p-8 md:p-10 shadow-elegant">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent_60%)]" aria-hidden="true" />
+              <div className="relative flex flex-col md:flex-row items-center justify-between gap-6 text-primary-foreground">
+                <div className="flex items-start gap-4 flex-1">
+                  <div className="hidden sm:flex p-3 bg-primary-foreground/15 backdrop-blur-sm rounded-xl flex-shrink-0">
+                    <Sparkles className="w-6 h-6" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <Badge className="mb-2 bg-primary-foreground/20 text-primary-foreground border-primary-foreground/30 backdrop-blur-sm hover:bg-primary-foreground/25">Side Venture</Badge>
+                    <h2 id="one-weekend-heading" className="text-2xl md:text-3xl font-bold mb-1">Need a website by Monday?</h2>
+                    <p className="text-primary-foreground/90 leading-relaxed">
+                      I also run <span className="font-semibold">One Weekend Websites</span> — clean, mobile-first sites for small businesses at a $499 flat rate.
+                    </p>
+                  </div>
+                </div>
+                <Button variant="accent" size="lg" asChild className="group flex-shrink-0 shadow-lg">
+                  <a href="https://www.oneweekendwebsites.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit One Weekend Websites (opens in new tab)">
+                    Visit Site
+                    <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="py-24 bg-muted/30" aria-labelledby="contact-heading">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
