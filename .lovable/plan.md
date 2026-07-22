@@ -1,24 +1,29 @@
-Goal: Make the site's social link preview more attractive and personal, and reposition the One Weekend Websites promotion so it doesn't interrupt the professional narrative.
+## Root cause
 
-## What we'll change
+The Lovable ↔ GitHub two-way sync is currently broken. The GitHub repo `jordanlander/jordanlander` is stuck on an old static-site commit whose latest message is `Delete CNAME`. As a result, GitHub is missing:
 
-### 1. Create a branded social preview image
-- The current OG/Twitter image points to `https://jordanlander.com/Jordan_Lander.jpg`, but the headshot is only in `src/assets`, not `public`. So the preview is likely broken.
-- Generate a 1200×630 branded social card that includes Jordan's headshot, name, title, and a short tagline, using the existing teal/amber design tokens.
-- Save it as `public/og-image.jpg` so it deploys to the site root and is accessible at `https://jordanlander.com/og-image.jpg`.
-- Update `index.html` OG and Twitter meta tags to reference the new image, and verify the dimensions and alt text are set correctly.
+- The `public/CNAME` file (so GitHub Pages shows “DNS Check in Progress” and the custom domain can fail or show blank)
+- The new Vite/React source files (`vite.config.ts`, `src/`, etc.)
+- The correct `.github/workflows/static.yml` workflow that builds and uploads `./dist`
 
-### 2. Move One Weekend Websites into a compact footer banner
-- Current location is directly after the About/Leadership Highlights section, which breaks the professional story flow.
-- Move it to a compact, attractive callout between the News section and the Contact section.
-- Redesign it as a slim banner/card rather than a full split-image section:
-  - Clear headline (e.g., "Need a website fast?")
-  - One sentence of value proposition
-  - Prominent CTA button to `oneweekendwebsites.com`
-  - Keep the teal/amber accent styling consistent with the rest of the site.
-- Remove the existing full One Weekend section from its current position and update the nav link to point to the new banner (or remove the nav link if it becomes a footer callout).
+My remote checks confirm that `jordanlander.com` sometimes resolves to the latest content, but the underlying GitHub Pages deployment is inconsistent and the project URL still serves the old site. The fix is to re-sync the project and make the deployment files more robust.
 
-### 3. Verify the changes
-- Build the project to ensure no errors.
-- Check that the new OG image is in `public/` and referenced correctly.
-- Review the preview to confirm the One Weekend banner is compact and clear.
+## What I will change in the codebase
+
+1. **Add `public/.nojekyll`** — prevents GitHub Pages from running Jekyll on the deployment, which avoids subtle path issues.
+2. **Add cache-busting meta tags in `index.html`** — tells browsers and CDNs not to cache the page as heavily, so updates appear immediately after a deploy.
+3. **Explicitly set `base: '/'` in `vite.config.ts`** — makes the canonical custom domain the default base for all asset URLs.
+4. **Confirm `public/CNAME` and `.github/workflows/static.yml`** — verify the CNAME contains exactly `jordanlander.com` and that the workflow builds the project and uploads only `./dist`.
+
+## What you need to do (one step)
+
+5. **Re-sync the GitHub integration** — in the Lovable editor, go to the GitHub integration and reconnect/re-sync the project to `jordanlander/jordanlander`. This pushes the current codebase (including the restored CNAME and workflow) to GitHub and overwrites the stale state.
+
+## After re-sync
+
+6. I will trigger or verify a GitHub Actions run and check the live site at `jordanlander.com` (desktop + mobile) to confirm the blank page is gone and the custom domain is no longer stuck in “DNS Check in Progress.”
+7. I will ask you to hard-refresh the page on your phone to clear any cached DNS or browser cache.
+
+## Expected outcome
+
+`jordanlander.com` serves the latest version of the site, updates reliably on every push, and the custom domain passes GitHub Pages verification.
